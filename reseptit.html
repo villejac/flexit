@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="utf-8">
+    <title>FlexIt-Reseptit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" async></script>
+    <script src="resepti.js" async></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/bicep.png">
+</head>
+
+<body>
+    <div class="top-site" id="res">
+        <div class="logo"><a href="index.html">FlexIt</a></div>
+        <div id="menu-btn"><img class="close-cross" src="img/menu2.svg" alt="close"></div>
+
+        <div id="menu-container" class="menu-container">
+            <div id="close-btn"><img class="close-cross" src="img/close.svg" alt="close"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="palvelut.html">Palvelut</a></li>
+                    <li><a href="hinnasto.html">Hinnasto</a></li>
+                    <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+                    <li><a href="reseptit.html" id="selected">Reseptejä</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="search-box">
+            <h6>Reseptihaku</h6>
+            <p class="teksti1">Hae reseptejä ainesosilla</p>
+            <p class="teksti2">haku toimii ainoastaan englanniksi</p>
+
+            <input type="text" id="hakusana" placeholder='syötä ainesosa esim: "banana"'>
+            <button id="search">Hae</button>
+        </div>
+    </div>
+
+    <div class="reseptit-container">
+
+        <div id="recipe-here"></div>
+
+    </div>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>

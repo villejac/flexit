@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column; 
+    background-color: #f8f8f8;
+}
+p {
+    line-height: 1.3;
+    font-size: 18px;
+}
+.section-one {
+    height: 100vh;
+    background: url(img/tausta21.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #1d1d1d;
+}
+.section-two {
+    min-height: 400px;
+    padding: 100px 0;
+}
+.menu-container {
+    height: 100vh;
+    width: 30%;
+    position: fixed;
+    left: 100%;
+    z-index: 1001;
+    background: #1d1d1d;
+    overflow: hidden;
+    text-align: left;
+    -webkit-transition: -webkit-transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+}
+.active {
+    -webkit-transform: translateX(350px);
+    -moz-transform: translateX(350px);
+    -o-transform: translateX(350px);
+    -ms-transform: translateX(350px);
+    transform: translateX(-100%);
+    box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 22%);
+    -moz-box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    -webkit-box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 22%);
+}
+.logo {
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    left: 15px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 30px;
+    z-index: 2;
+}
+.logo a {
+    color: #000;
+    text-decoration: none;
+}
+#menu-btn {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    color: #000;
+    cursor: pointer;
+    padding: 5px 5px;
+    font-weight: bold;
+    z-index: 2;
+}
+.shake-this {
+    animation: shake 0.5s;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+#close-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 10002;
+    cursor: pointer;
+    transform: scale(0);
+}
+.close-cross {
+    width: 40px;
+}
+.animate2 {
+    animation: rotateFade2 1s alternate ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards; 
+    -ms-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; 
+}
+@keyframes rotateFade2 { 
+    0%   {transform: scale(0)  rotate(0deg);}
+    100% {transform: scale(1) rotate(360deg);}
+}
+.menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    text-align: center;
+    text-transform: uppercase;
+}
+.menu ul li a{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #fff;
+    
+    display: inline-block;
+    position: relative;
+  }
+
+  .menu ul li a:after {    
+    background: none repeat scroll 0 0 transparent;
+    text-underline-position: under;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .menu ul li a:hover:after { 
+    width: 100%; 
+    left: 0;
+  }
+  #selected {
+    text-decoration: underline 3px !important;
+    text-underline-position: under;
+  }
+  .menu ul {
+      list-style: none;
+  }
+  .menu ul li {
+    padding: 20px;
+}
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    font-size: 12vh;
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    /* text-shadow: 1px 1px 2px #fff; */
+    color: #fff;
+}
+.contact {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-72%);
+    -ms-transform: translate(-50%,-72%);
+    transform: translate(-50%,-72%);
+    font-size: 3vh;
+    text-align: center;
+    border: 1px solid black;
+    padding: 5px 8px;
+    cursor: pointer;
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255) 50%, black 50%);
+    -webkit-transition: background-position .5s;
+    -moz-transition: background-position .5s;
+    transition: background-position .5s;
+}
+.contact a {
+    text-decoration: none;
+    color: #111;
+}
+.contact:hover {
+    background-position: 0 -100%;
+    color: #fff;
+}
+.contact:hover a{
+    color: #fff;
+}
+
+
+  /* section two */
+  h3 {
+    margin-bottom: 30px;
+    font-size: 5vh;
+  }
+  h2 {
+      padding: 50px 20px;
+      text-align: center;
+      font-size: 6vh;
+  }
+  .flex-container {
+    display: flex;
+}
+
+.flex-left {
+    flex: 1;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}  
+
+.flex-right {
+    flex: 1;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-box {
+    width: 100%;
+    height: auto;
+}
+.hieroja-kuva {
+    width: 100%;
+    height: auto;
+}
+@media only screen and (max-width: 900px) {
+    .flex-container {
+        flex-direction: column;
+        }
+    #flex-ord {
+        flex-direction: column-reverse;
+    }
+}
+/* section three */
+h4 {
+    text-align: center;
+    font-size: 5vh;
+    padding-top: 100px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    justify-items: center;
+    align-items: center;
+    height: 300px;
+  }
+  .grid-item {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .active-animation {
+    -webkit-animation: in 1s forwards;
+  }
+
+  @-webkit-keyframes in {
+    0%   { -webkit-transform: scale(1); }
+    100% {-webkit-transform: scale(1.2);}
+}
+
+
+/* Sivujen yläosio */
+.top-site {
+    height: 300px;
+    position: relative;
+}
+.head-text-top {
+    font-size: 8vh;
+    font-family: 'Lato', sans-serif;
+}
+.top-text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+/* Hinnassto */
+.hinnasto-first {
+    margin-top: 50px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+    max-width: 900px;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    width: 50%;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+.maksu-infot {
+    text-align: center;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 50px;
+    max-width: 700px;
+    margin: auto;
+}
+.maksu-infot h6 {
+    margin-top: 50px;
+    color: #434343;
+    font-size: 3vh;
+}
+.maksu-infot p {
+    color: #484848;
+    font-size: 2vh;
+}
+.muotoa {
+    background-color: #1d1d1d;
+}
+.muotoa-teksti {
+    color: #fff;
+}
+.muotoa-logo a {
+    color: #fff;
+}
+.muoto {
+    height: 80px;
+    background-color: #1d1d1d;
+    clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 25%);
+}
+
+/* Palvelut */
+.palvelut-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    justify-items: center;
+    align-items: center;
+    height: 300px;
+    height: auto;
+}
+.palvelu1 {
+    padding: 20px;
+    max-width: 650px;
+}
+.palvelu1-kuva {
+    padding: 20px;
+}
+.palvelu-img {
+    width: 80%;
+    height: auto;
+}
+.pal-ots {
+    font-size: 4vh;
+    text-align: center;
+}
+.pal-tekst {
+    text-align: center;
+}
+.pal-tekst a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Yhteydstiedot */
+.yhteys-container {
+    display: flex;
+    height: 500px;
+    font-family: 'Poppins', sans-serif;
+}
+.osoite-box {
+    flex: 1;
+    position: relative;
+    color: rgb(0, 0, 0);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.osote-head {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'Lato', sans-serif;
+    margin-top: 15px;
+}
+.osote-info {
+    color: #000000;
+    font-size: 17px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+.form-box {
+    flex: 1;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.form-in {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin-bottom: 18px;
+}
+#contact-site {
+    height: 100vh;
+}
+.form-heading {
+    font-size: 4vh;
+    font-family: lato, sans-serif;
+    color: rgb(0, 0, 0);
+}
+.send-btn {
+    background-color: #f39422;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.send-btn:hover {
+    background-color: #e28a1e;
+}
+form label {
+    color: #798a98;
+}
+::-webkit-input-placeholder { 
+    color: #000000;
+    font-size: 16px;
+  }
+iframe {
+    width: 100%;
+    height: 450px;
+}
+.fafa {
+    width: 30px;
+}
+
+/* Reseptit */
+#recipe-here {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.reseptit-tahan {
+    width: 400px;
+    text-align: center;
+}
+.valmistus-lista {
+    text-align: left;
+    margin: 10px 20px;
+    padding: 5px 45px;
+    line-height: 1.5;
+}
+h5 {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+#res {
+    background: url(img/ruoka.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+}
+.search-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    font-size: 3vh;
+    text-align: center;
+    padding: 30px 60px;
+    border-radius: 10px;
+    background: rgb(204, 204, 204);
+    background: rgba(204, 204, 204, 0.5);
+}
+h6 {
+    font-size: 35px;
+    padding-bottom: 15px;
+}
+.teksti1 {
+    font-weight: bold;
+    font-size: 20px;
+}
+.teksti2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+#hakusana {
+    padding: 5px;
+    border: none;
+    height: 40px;
+    width: 240px;
+}
+#search {
+    font-size: 12px;
+    color: #fff;
+    min-width: 70px;
+    height: 40px;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 0;
+    background-color: #333;
+    cursor: pointer;
+}
+footer {
+    height: 150px;
+    background-color: #1d1d1d;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    margin-top: auto;
+}
+.footer-text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 900px) {
+    h1 {
+        font-size: 8vh;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 5vh;
+    }
+    #res {
+        height: 400px;
+    }
+    .search-box {
+        padding: 30px 30px;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+.menu-container {
+    width: 45%;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    #recipe-here {
+        display: block;
+        }
+    .reseptit-tahan {
+        width: auto;
+    }
+    .head-text-top {
+        font-size: 6vh;
+    }
+    .menu-container {
+        width: 50%;
+        }
+    }
+@media only screen and (max-width: 900px) {
+    .palvelut-grid-container {
+        grid-template-columns: 1fr;
+    }
+    .palvelu1-kuva {
+        text-align: center;
+    }
+    .palvelu-img {
+        width: 100%;
+        height: auto;
+    }
+}
+@media only screen and (max-width: 950px) {
+    .yhteys-container {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 830px) {
+    .yhteys-container {
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+    }
+    .form-box {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}    

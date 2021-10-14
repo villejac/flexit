@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hierontapalvelut FlexIt</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/bicep.png">
+</head>
+
+<body>
+    <div class="section-one">
+        <div class="logo muotoa-logo"><a href="index.html">FlexIt</a></div>
+        <div id="menu-btn"><img class="close-cross" src="img/menu2.svg" alt="close"></div>
+
+        <div id="menu-container" class="menu-container">
+            <div id="close-btn"><img class="close-cross" src="img/close.svg" alt="close"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html" id="selected">Etusivu</a></li>
+                    <li><a href="palvelut.html">Palvelut</a></li>
+                    <li><a href="hinnasto.html">Hinnasto</a></li>
+                    <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+                    <li><a href="reseptit.html">Reseptejä</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <h1>Hierontapalvelut FlexIt</h1>
+        <div class="contact"><a href="yhteystiedot.html">ota yhteyttä</a></div>
+
+    </div>
+
+    <div class="section-two">
+        <div class="flex-container">
+            <div class="flex-left">
+                <div class="intro-text">
+                    <h3>Hoida kroppasi kuntoon.</h3>
+                    <p>Oman kehon pitäminen kunnossa on kuin laittaisi rahaa pankkiin. Sen ei tarvitse olla
+                        monimutkaista mutta se kannattaa tehdä järkevästi. Näiden ovien takana on ratkaisu:
+                        ammattitaitoista hierontaa sekä tieteeseen perustuvaa lihaskuntoharjoittelua.</p>
+                </div>
+
+
+            </div>
+
+            <div class="flex-right">
+
+                <div class="image-box">
+                    <img src="img/hierontaa.jpg" alt="Hieroja" class="hieroja-kuva">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="section-three">
+        <div id="flex-ord" class="flex-container">
+            <div class="flex-left">
+                <div class="image-box">
+                    <img src="img/man.jpg" alt="Hieroja" class="hieroja-kuva">
+                </div>
+            </div>
+
+            <div class="flex-right">
+
+                <div class="intro-text">
+                    <h3>Kuka olen?</h3>
+                    <p>Minun nimeni on Harri Hieroja ja omaan vuosien kokemuksen erilaisista vammoista ja niiden
+                        kuntouttamisesta sekä ravintoneuvonnasta.
+                        Ota siis rohkeasti yhteyttä niin sovitaan aika ja laitetaan kroppasi kuntoon!
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="section-three">
+        <h4>Löydä meidät somesta</h4>
+        <div class="grid-container">
+            <div class="grid-item"><a href="https://fi-fi.facebook.com/" target="_blank"><img class="close-cross"
+                        src="img/facebook.svg" alt="facebook"></a></div>
+            <div class="grid-item"><a href="https://www.instagram.com/" target="_blank"><img class="close-cross"
+                        src="img/instagram.svg" alt="facebook"></a></div>
+            <div class="grid-item"><a href="https://www.linkedin.com/" target="_blank"><img class="close-cross"
+                        src="img/linkedin.svg" alt="facebook"></a></div>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        let animationElement = document.getElementsByClassName('grid-item');
+        for (let i = 0; i < animationElement.length; i++) {
+
+            animationElement[i].onmouseenter = function () {
+
+                animationElement[i].classList.add("active-animation");
+
+            }
+
+            animationElement[i].onmouseleave = function () {
+
+                animationElement[i].classList.remove("active-animation");
+
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="utf-8">
+    <title>FlexIt-Yhteystiedot</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/bicep.png">
+</head>
+
+<body>
+    <div class="top-site muotoa">
+        <div class="logo muotoa-logo"><a href="index.html">FlexIt</a></div>
+        <div id="menu-btn"><img class="close-cross" src="img/menu2.svg" alt="close"></div>
+
+        <div id="menu-container" class="menu-container">
+            <div id="close-btn"><img class="close-cross" src="img/close.svg" alt="close"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="palvelut.html">Palvelut</a></li>
+                    <li><a href="hinnasto.html">Hinnasto</a></li>
+                    <li><a href="yhteystiedot.html" id="selected">Yhteystiedot</a></li>
+                    <li><a href="reseptit.html">Reseptejä</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="top-text-container muotoa-teksti">
+            <h5 class="head-text-top">Yhteystiedot</h5>
+        </div>
+    </div>
+    <div class="muoto"></div>
+
+    <div class="yhteys-container">
+        <div class="osoite-box">
+            <div class="osoite-tiedot">
+                <img class="fafa" src="img/map-pin-solid.svg" alt="pin">
+
+                <p class="osote-info">Hierojantie 1, 60100 Seinäjoki</p>
+
+                <img class="fafa" src="img/mobile-alt-solid.svg" alt="phone">
+
+                <p class="osote-info">044 123 456</p>
+
+                <img class="fafa" src="img/envelope-solid.svg" alt="email">
+
+                <p class="osote-info">hieroja(at)flexit.fi</p>
+            </div>
+        </div>
+
+        <div class="form-box">
+
+            <form onsubmit="cancelSend()">
+                <h3 class="form-heading">Ota yhteyttä</h3>
+
+                <input type="text" id="etunimi" name="etunimi" class="form-in" placeholder="Etunimi" required><br>
+
+                <input type="text" id="sukunimi" name="sukunimi" class="form-in" placeholder="Sukunimi" required><br>
+
+                <input type="tel" id="phone" name="phone" placeholder="Puh" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                    class="form-in" required><br>
+                <textarea name="viesti" rows="6" cols="40" placeholder="Viesti" required></textarea><br>
+                <input type="submit" value="Lähetä" class="send-btn">
+            </form>
+        </div>
+    </div>
+
+    <div>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1824.519815414339!2d22.818640517443853!3d62.787371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4687cb94653f1ed5%3A0xdabf7aab958fe6e9!2sFrami!5e0!3m2!1sfi!2sfi!4v1634156074841!5m2!1sfi!2sfi"
+            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+    </div>
+
+    <footer>
+
+    </footer>
+    <script src="main.js"></script>
+
+    <script>
+        function cancelSend() {
+            event.preventDefault()
+        }
+    </script>
+
+</body>
+
+</html>
